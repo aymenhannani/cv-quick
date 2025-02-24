@@ -1,0 +1,246 @@
+{
+    "Identité": {
+        "Nom": "Votre Nom",
+        "Domaine": "Finance de Marché",
+        "Poste_Actuel": "Développeur / Ingénieur"
+    },
+    "Expérience": {
+        "Société_Générale_ATS": [
+            {
+                "Poste": "BI & Operations Consultant | Cross-Asset",
+                "Période": "Juin 2020 -",
+                "Localisation": "Casablanca, Maroc",
+                "Contexte": "Travail sur la standardisation et l'automatisation des processus documentaires pour les produits structurés en finance de marché.",
+                "Projets": {
+                    "Automation_Brochure": {
+                        "Contexte": {
+                            "Description": "Chaque produit structuré (Athena, Phoenix, Athena Daily) disposait d’un système VBA distinct, entraînant une maintenance complexe et des inefficacités. L’objectif était de migrer et unifier ces applications VBA en une solution desktop en Python afin d’optimiser la gestion documentaire et d’automatiser les processus de reporting."
+                        },
+                        "Responsabilités_Réalisations": {
+                            "Développement_Application": [
+                                "Création d’une interface dynamique adaptant les champs en fonction du produit structuré.",
+                                "Architecture modulaire et scalable, partageant les processus communs tout en intégrant les spécificités de chaque produit.",
+                                "Développement en Python (PyQt) pour une interface ergonomique et interactive."
+                            ],
+                            "Standardisation_Automatisation": [
+                                "Rationalisation et regroupement des workflows VBA pour réduire les redondances.",
+                                "Système flexible de gestion des inputs, avec modularité des champs spécifiques aux produits.",
+                                "Automatisation des traitements liés aux données réglementaires, remboursements et mécanismes financiers."
+                            ],
+                            "Génération_Documents": [
+                                "Automatisation de la production des fichiers Excel pour le calcul des taux de rendement et des sous-jacents.",
+                                "Développement d’un module de génération de PowerPoints dynamiques pour les brochures de produits structurés.",
+                                "Intégration d’un pipeline de structuration et transformation des données avant leur injection dans les formats de sortie."
+                            ],
+                            "Gestion_Données_Scalabilité": [
+                                "Mise en place d’une base de données centralisée pour l’historisation des produits.",
+                                "Interopérabilité avec Excel et PowerPoint pour garantir une adoption fluide par les utilisateurs métiers.",
+                                "Standardisation des processus de validation et conformité réglementaire."
+                            ]
+                        },
+                        "Technologies_Outils": {
+                            "Langages_Frameworks": ["Python", "VBA (migration)", "SQL","PyQt","Streamlit"],
+                            "Automatisation_Processing": ["Pandas", "OpenPyXL", "Python-docx", "ReportLab","Python-pptx","win32","xlwings"],
+                            "Gestion_Inputs_UI": ["PyQt", "JSON", "Configuration dynamique"],
+                            "Interopérabilité": ["Connexion aux fichiers Excel, PowerPoint"],
+                            "Architecture_Workflow": ["Modèle centralisé", "Standardisation des pipelines"]
+                        },
+                        "Impact_Valeur_Ajoutée": [
+                            "Réduction des redondances et simplification des workflows, facilitant la maintenance et l’évolution des outils.",
+                            "Amélioration de l’expérience utilisateur avec une interface unifiée et intuitive.",
+                            "Automatisation des processus, accélérant la production documentaire et améliorant la conformité.",
+                            "Gain de temps significatif, permettant aux équipes de se concentrer sur des tâches à forte valeur ajoutée."
+                        ]
+                    },
+                   "SRP": {
+                "Contexte": {
+                    "Description": "Développement de dashboards Power BI et d’extractions de données depuis une API Big Data. Ce projet offre une vision détaillée sur les données et performances des produits structurés selon plusieurs critères tels que la région, le produit, le distributeur et l’émetteur."
+                },
+                "Responsabilités_Réalisations": {
+                    "Développement_Dashboards": [
+                        "Conception et développement de tableaux de bord interactifs sous Power BI.",
+                        "Intégration des KPIs liés aux performances des produits structurés.",
+                        "Mise en place de filtres dynamiques pour une analyse personnalisée (région, produit, distributeur, émetteur)."
+                    ],
+                    "Extraction_Données_BigData": [
+                        "Connexion et interrogation d’une API Big Data pour récupérer les données des produits structurés.",
+                        "Développement de scripts Python pour extraire, transformer et charger (ETL) les données dans Power BI.",
+                        "Optimisation des requêtes pour améliorer la rapidité des extractions et garantir l’exactitude des informations."
+                    ],
+                    "Analyse & Visualisation": [
+                        "Mise en place d’indicateurs de performance clés (KPIs) pour suivre l’évolution du marché.",
+                        "Création de rapports automatisés avec des vues analytiques adaptées aux différents besoins métiers.",
+                        "Standardisation des visualisations pour assurer une cohérence dans l’interprétation des données."
+                    ]
+                },
+                "Technologies_Outils": {
+                    "Langages_Frameworks": ["Python", "DAX", "SQL"],
+                    "BI & Visualisation": ["Power BI", "Pandas", "Matplotlib"],
+                    "Big Data & API": ["API REST", "Spark", "Hadoop"],
+                    "ETL & Automatisation": ["Python ETL", "Power Query"]
+                },
+                "Impact_Valeur_Ajoutée": [
+                    "Fourniture d’une vision globale et détaillée des performances des produits structurés.",
+                    "Amélioration de la prise de décision grâce à des dashboards interactifs et dynamiques.",
+                    "Réduction du temps d’analyse en automatisant l’extraction et le traitement des données.",
+                    "Optimisation de la surveillance des produits structurés en fonction des critères métiers."
+                ]
+                    },
+                    "Process Prod" : {
+                        "Contexte": {
+                            "Description": "Optimisation et automatisation du suivi des requêtes et tâches de production. Passage d’un suivi manuel sous Excel à une solution structurée avec automatisation et dashboards analytiques."
+                        },
+                        "Responsabilités_Réalisations": {
+                            "Développement_Excel_Dynamique": [
+                                "Refonte complète du fichier Excel avec une structure plus robuste et des fonctionnalités avancées.",
+                                "Ajout de formules dynamiques et de macros pour automatiser la saisie et le suivi des requêtes.",
+                                "Création d’une interface interactive facilitant la consultation et la mise à jour des tâches en cours.",
+                                "Implémentation d’un système d’archivage intelligent pour un suivi historique amélioré."
+                            ],
+                            "Automatisation_Suivi": [
+                                "Automatisation du classement et de l’assignation des requêtes en fonction de leur nature et criticité.",
+                                "Intégration de filtres dynamiques pour retrouver rapidement les informations pertinentes.",
+                                "Mise en place de notifications automatisées pour informer les parties prenantes des évolutions des tâches.",
+                                "Développement d’un système de suivi des délais pour mesurer l’efficacité du traitement des requêtes."
+                            ],
+                            "Dashboards_Analyse": [
+                                "Création de dashboards Power BI pour visualiser les tendances des requêtes (volume, types, délais).",
+                                "Mise en place d’une répartition graphique des tâches pour une meilleure allocation des ressources.",
+                                "Suivi en temps réel de l’avancement des automatisations pour mesurer les gains de productivité.",
+                                "Tableaux de bord interactifs offrant des filtres pour analyser les données par équipe, utilisateur ou catégorie."
+                            ]
+                        },
+                        "Technologies_Outils": {
+                            "Langages_Automatisation": ["VBA", "Python (xlwings, openpyxl)", "SQL"],
+                            "BI_Visualisation": ["Power BI", "Excel avancé (TCD, Power Query)", "Pandas"],
+                            "Optimisation_Processus": ["Macros Excel", "Automatisation des flux de travail"]
+                        },
+                        "Impact_Valeur_Ajoutée": [
+                            "Amélioration de l’efficacité opérationnelle en réduisant la charge administrative et les tâches répétitives.",
+                            "Visibilité accrue sur les requêtes et leur gestion, facilitant l’identification des optimisations possibles.",
+                            "Meilleure allocation des ressources grâce à une répartition des tâches optimisée et suivie en temps réel.",
+                            "Accélération des automatisations en identifiant clairement les points bloquants et les gains potentiels."
+                        ]
+                    }
+
+                }
+            },
+            {
+                "Poste": "Développeur SmartDx & Gestion des Templates Documents Juridiques",
+                "Période": "XXXX - XXXX",
+                "Contexte": "Travail sur Thunderhead (SmartDx) pour le développement, la maintenance et l’automatisation des documents juridiques TS, FT et KID pour les produits structurés.",
+                "Projets": {
+                    "Développement_Maintenance_Documents_Juridiques": {
+                        "Contexte": {
+                            "Description": "Modification, développement et debugging de la génération des documents juridiques TS, FT et KID sur Thunderhead (SmartDx)."
+                        },
+                        "Responsabilités_Réalisations": {
+                            "Modification_Développement_Code": [
+                                "Adaptation des documents générés aux évolutions des produits.",
+                                "Correction des anomalies et maintenance du système de génération de documents.",
+                                "Suivi des modifications en meetings quotidiens.",
+                                "Tests de régression pour comparer les documents avant/après modification."
+                            ]
+                        },
+                        "Technologies_Outils": ["Thunderhead (SmartDx)", "SQL", "XML", "PostgreSQL", "PgAdmin"]
+                    },
+                    "Intégration_APIs_Internes": {
+                        "Contexte": {
+                            "Description": "Assurer la communication et l’intégration entre SmartDx et les APIs internes."
+                        },
+                        "Responsabilités_Réalisations": {
+                            "Développement_APIs": [
+                                "Appels API pour récupérer et injecter des données dans les documents juridiques.",
+                                "Développement et correction des connecteurs API pour une meilleure synchronisation.",
+                                "Optimisation des performances des appels API."
+                            ]
+                        },
+                        "Technologies_Outils": ["APIs REST", "Python", "JSON", "PostgreSQL"]
+                    },
+                    "Gestion_Bases_Données_Compliance": {
+                        "Contexte": {
+                            "Description": "Maintenance des bases de données clients et conformité réglementaire (FINMA, EMTN, MiFID II)."
+                        },
+                        "Responsabilités_Réalisations": {
+                            "Mise_à_Jour_BDD": [
+                                "Mise à jour des bases clients selon les normes de conformité.",
+                                "Coordination avec les équipes réglementaires.",
+                                "Audit et implémentation des correctifs."
+                            ],
+                            "CI_CD_DevOps": [
+                                "Mise en place de pipelines CI/CD pour automatiser les déploiements de modifications sur les bases de données et applications associées.",
+                                "Optimisation des workflows de développement avec Git et intégration continue.",
+                                "Supervision et monitoring des environnements de production pour garantir la stabilité des systèmes."
+                            ]
+                        },
+                        "Technologies_Outils": ["SQL", "PostgreSQL", "PgAdmin", "Compliance Tools", "JavaScript", "Git", "Docker"]
+                    }
+                }
+            }
+        ],
+"Jumia": [
+            {
+                "Poste": "E-commerce Business Analyst",
+                "Période": "Novembre 2018 – Décembre 2019",
+                "Contexte": "Conception et gestion des KPIs stratégiques pour le suivi budgétaire et l'optimisation des décisions business.",
+                "Projets": {
+                    "Optimisation_Pricing": {
+                        "Contexte": {
+                            "Description": "Développement de modèles de pricing basés sur du benchmarking pour améliorer les marges et l'efficacité opérationnelle."
+                        },
+                        "Responsabilités_Réalisations": {
+                            "Analyse_Marché": [
+                                "Analyse comparative des prix du marché et des concurrents.",
+                                "Développement d'indicateurs de performance pour ajuster les stratégies de pricing."
+                            ],
+                            "Développement_Modeles": [
+                                "Création de modèles de pricing basés sur des analyses statistiques et prédictives.",
+                                "Automatisation des rapports de suivi de la rentabilité des produits."
+                            ]
+                        },
+                        "Technologies_Outils": ["Python", "SQL", "Excel", "Power BI"]
+                    },
+                    "Optimisation_Stock_Vente": {
+                        "Contexte": {
+                            "Description": "Mise en place et analyse de KPIs pour optimiser les processus métier dans la gestion des stocks, les ventes et la rétention client."
+                        },
+                        "Responsabilités_Réalisations": {
+                            "Gestion_Stocks": [
+                                "Analyse et prévision des ruptures de stock.",
+                                "Optimisation des niveaux de stock en fonction de la demande et des tendances."
+                            ],
+                            "Performance_Ventes": [
+                                "Suivi des performances de vente et recommandations d'amélioration.",
+                                "Élaboration de stratégies marketing basées sur l'analyse des données clients."
+                            ]
+                        },
+                        "Technologies_Outils": ["SQL", "Power BI", "Python", "Excel"]
+                    }
+                }
+            }
+        ],
+        "Attijari_WafaBank": {
+            "Poste": "Stage PFE - Process Modeling Middle Office",
+            "Période": "Mars 2018 – Juillet 2018",
+            "Contexte": "Analyse et modélisation des processus métier bancaires, contribuant à l'amélioration du suivi de la performance.",
+            "Projets": {
+                "Automatisation_Processus": {
+                    "Contexte": {
+                        "Description": "Optimisation et automatisation des tâches récurrentes dans le suivi de la performance des processus Middle Office."
+                    },
+                    "Responsabilités_Réalisations": {
+                        "Modélisation_Processus": [
+                            "Analyse des workflows existants pour identifier les axes d'amélioration.",
+                            "Définition et implémentation d'indicateurs de suivi de la performance."
+                        ],
+                        "Automatisation": [
+                            "Développement d'outils pour automatiser certaines tâches de reporting et d'analyse.",
+                            "Mise en place de solutions pour optimiser l'interaction entre les équipes métiers et IT."
+                        ]
+                    },
+                    "Technologies_Outils": ["SQL", "Python", "Power BI", "Excel"]
+                }
+            }
+        }
+    }
+}
