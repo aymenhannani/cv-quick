@@ -1,3 +1,4 @@
 gradio
 smolagents
 yaml
+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

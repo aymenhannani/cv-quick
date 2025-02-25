@@ -1,5 +1,4 @@
-from tools.tools import skill_parser
-import json
+from tools.tools import skill_parser,job_reader,resume_optimizer,generate_experience
 from smolagents import CodeAgent, HfApiModel
 import yaml
 from tools.final_answer import FinalAnswerTool
@@ -49,11 +48,8 @@ If you are passionate about leveraging your expertise in Sophis/Fusion Invest to
 By joining our firm, you will have the opportunity to work alongside industry leaders, enhancing your expertise while contributing to high-impact initiatives. We are always on the lookout for talented professionals who thrive in a dynamic, collaborative environment.
 """
 
-data_path="data/cv.json"
-with open(data_path) as f:
-    d = json.load(f)
-#Call the function with the correct data type
-answer = skill_parser(d)
+
+
 #Set up Final Answer Tool
 final_answer = FinalAnswerTool()
 #Construct a model
@@ -71,14 +67,14 @@ with open("prompts.yaml", 'r') as stream:
 # We're creating our CodeAgent
 agent = CodeAgent(
     model=model,
-    tools=[final_answer,skill_parser], # add your tools here (don't remove final_answer)
-    max_steps=6,
+    tools=[final_answer, skill_parser, job_reader, resume_optimizer,generate_experience],
+    max_steps=3,
     verbosity_level=1,
     grammar=None,
     planning_interval=None,
-    name=None,
-    description=None,
-    prompt_templates=prompt_templates
+    name="ResumeOptimizerAgent",
+    description="An agent that extracts user skills, processes job descriptions, and generates optimized experience sections for resumes.",
+    prompt_templates=prompt_templates,
 )
 
 
