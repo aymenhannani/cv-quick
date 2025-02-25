@@ -1,4 +1,4 @@
-from smolagents import tool
+from smolagents import tool, HfApiModel
 import json
 
 
@@ -17,7 +17,7 @@ def skill_parser(arg1:dict)-> str: # it's important to specify the return type
 @tool
 def job_reader(arg1:str)-> str: # it's important to specify the return type
     # Keep this format for the tool description / args description but feel free to modify the tool
-    """A tool that reads and store the job description.
+    """A tool that reads the user prompt and store it as the job description.
     Args:
         arg1: the first argument
     """
@@ -27,51 +27,43 @@ def job_reader(arg1:str)-> str: # it's important to specify the return type
 
 #Resume Optimizer
 @tool
-def resume_optimizer(arg1:str,arg2:str)-> str: # it's important to specify the return type
+def resume_optimizer_prompt(arg1:str,arg2:str)-> str: # it's important to specify the return type
     # Keep this format for the tool description / args description but feel free to modify the tool
-    """A tool that combine a job description and a the user skill json string to be treated by the model to generate the experiece section.
+    """A tool that creates the prompt for the resume optimizer generation, inputs are user skills data and job description.
     Args:
         arg1: the first argument
         arg2: the second argument
     """
-    
-    return "Job Description : \n"+arg1+"\n"+"User Skills : \n"+arg2
+    prompt="Write Optimized Resume sections for the following job description and user skills\n\n"
+    return prompt+"Job Description : \n"+arg1+"\n"+"User Skills : \n"+arg2
 
 
 from smolagents import tool
 
 @tool
-def generate_experience( arg1: str) -> str:
+def generate_experience(arg1: str) -> str:
     """
-    A tool that takes user data and a job description as input, and generates an optimized experience
-    section for a resume using text generation.
+    A tool that takes a resume optimizer prompt and generates an optimized experience
+    section for a resume using text generation via Hugging Face's API.
     
     Args:
-        arg1: the first argument
+        arg1: A string containing the resume optimizer prompt.
     
     Returns:
         A string representing the optimized experience section.
     """
-    data_path="data/cv.json"
-    with open(data_path) as f:
-        d = json.load(f)
-    # Extract skills from the user_data dictionary.
-    skills = d.get("skills", [])
-    # Convert the skills list to a comma-separated string.
-    skills_str = ", ".join(skills) if isinstance(skills, list) else str(skills)
-    
-    # Build the prompt for text generation.
-    prompt = (
-        f"Job Description:\n{arg1}\n\n"
-        f"User Skills:\n{skills_str}\n\n"
-        "Based on the above, generate an optimized experience section for a resume that highlights relevant work experience."
+    # Instantiate the text generation model.
+    # You can adjust the model_id, max_tokens, and temperature as needed.
+    model = HfApiModel(
+        max_tokens=200,
+        temperature=0.5,
+        model_id="Qwen/Qwen2.5-Coder-32B-Instruct",
+        custom_role_conversions=None,
     )
     
-    # Here you would call your text generation model (e.g., via HfApiModel or another method).
-    # For demonstration purposes, we'll simulate the output.
-    generated_experience = f"[Generated Experience Section based on prompt]:\n{prompt}"
+    # Generate text using the model with the provided prompt.
+    generated_experience = model.generate(arg1)
     
     return generated_experience
-
 
 
